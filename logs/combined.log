@@ -173,3 +173,8 @@
 {"level":"info","message":"::1 - - [26/Nov/2025:02:17:43 +0000] \"GET /health?email+=asdkiasdjki%40gjisdaij.com&name=dksaodsaoid&password=d5268546645 HTTP/1.1\" 403 51 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","userAgent":"HTTPie"}
 {"level":"info","message":"::1 - - [26/Nov/2025:02:17:43 +0000] \"GET /health?email+=asdkiasdjki%40gjisdaij.com&name=dksaodsaoid&password=d5268546645 HTTP/1.1\" 403 51 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquistions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:03:52:54 +0000] \"GET / HTTP/1.1\" 200 25 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:03:52:54 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:03:53:00 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:03:53:00 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0\"","service":"acquisitions-api"}
