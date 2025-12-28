@@ -1,96 +1,75 @@
-🚀 Scalable Production-Ready API
+# 🚀 Scalable Production-Ready API
+### High-Load Backend & DevOps Practice Project
 
-High-Load Backend & DevOps Practice Project
+This repository contains a **production-ready backend API** designed to simulate real-world, high-load systems and modern development workflows.
 
-This repository contains a production-ready backend API designed to simulate real-world, high-load systems and modern development workflows.
+The project focuses on **building, testing, containerizing, and deploying scalable APIs**, following industry-grade backend and DevOps practices used in real products.
 
-The project focuses on building, testing, containerizing, and deploying scalable APIs, following industry-grade backend and DevOps practices used in real products.
+---
 
-✨ Overview
+## ✨ Overview
 
-This project demonstrates how a backend service evolves from source code into a secure, containerized, and automated production system.
+This project demonstrates how a backend service evolves from source code into a **secure, containerized, and automated production system**.
 
 Key goals:
+- Design a clean, scalable API architecture
+- Apply security, validation, and authentication best practices
+- Automate testing, CI/CD, and Docker image delivery
+- Understand how real backend products are built and shipped
 
-Design a clean, scalable API architecture
+---
 
-Apply security, validation, and authentication best practices
+## ⚙️ Tech Stack
 
-Automate testing, CI/CD, and Docker image delivery
+### 🟦 Backend
+- **Node.js / Express** — REST API development
+- **Drizzle ORM** — Type-safe SQL queries
+- **PostgreSQL (Neon)** — Production-grade database
+- **Zod** — Runtime schema validation
 
-Understand how real backend products are built and shipped
+### 🔐 Security
+- **JWT Authentication**
+- **Role-based access control (RBAC)**
+- **Arcjet** — Rate limiting & bot protection
 
-⚙️ Tech Stack
-🟦 Backend
+### 🛠 Infrastructure & DevOps
+- **Docker & Docker Compose** — Containerized environments
+- **GitHub Actions** — CI/CD automation
+- **Multi-platform Docker builds (Buildx)**
+- **Automated image publishing**
 
-Node.js / Express — REST API development
+### 🧪 Testing & Quality
+- **Jest & SuperTest**
+- Automated test execution & coverage reports
+- ESLint & Prettier enforcement
 
-Drizzle ORM — Type-safe SQL queries
+---
 
-PostgreSQL (Neon) — Production-grade database
+## 🔋 Features
 
-Zod — Runtime schema validation
+### API Capabilities
+- User authentication (signup / signin / signout)
+- JWT-based authorization
+- Admin & user roles
+- Business listings management
+- Deal lifecycle management (create / accept / reject)
+- Request validation using Zod
+- Health check endpoint
+- Structured logging with Winston
 
-🔐 Security
+### DevOps & Automation
+- CI pipelines for linting, testing, and builds
+- Automated Docker image creation & publishing
+- Clear workflow separation:
+  - `lint-and-format.yml`
+  - `tests.yml`
+  - `docker-build-and-push.yml`
 
-JWT Authentication
+---
 
-Role-based access control (RBAC)
+## 🧱 Project Structure
 
-Arcjet — Rate limiting & bot protection
-
-🛠 Infrastructure & DevOps
-
-Docker & Docker Compose — Containerized environments
-
-GitHub Actions — CI/CD automation
-
-Multi-platform Docker builds (Buildx)
-
-Automated image publishing
-
-🧪 Testing & Quality
-
-Jest & SuperTest
-
-Automated test execution & coverage reports
-
-ESLint & Prettier enforcement
-
-🔋 Features
-API Capabilities
-
-User authentication (signup / signin / signout)
-
-JWT-based authorization
-
-Admin & user roles
-
-Business listings management
-
-Deal lifecycle management (create / accept / reject)
-
-Request validation with Zod
-
-Health check endpoint
-
-Structured logging with Winston
-
-DevOps & Automation
-
-CI pipelines for linting, testing, and builds
-
-Automated Docker image creation & publishing
-
-Clear workflow separation:
-
-lint-and-format.yml
-
-tests.yml
-
-docker-build-and-push.yml
-
-🧱 Architecture
+```text
 src/
  ├── config/
  ├── controllers/
@@ -101,12 +80,12 @@ src/
  ├── services/
  └── utils/
 
-
-The project follows a modular, service-oriented structure, making it easy to scale, test, and extend.
-
-▶️ Running Locally
+### ▶️ Running Locally
+```
 Install dependencies
-npm install
+```
+
+ذذ``npm install
 
 Environment variables
 
@@ -135,44 +114,3 @@ docker run -p 3000:3000 scalable-api
 
 Development environment
 docker compose up --build
-
-⚙️ CI/CD Pipelines
-
-This project includes three automated GitHub Actions workflows:
-
-1️⃣ Lint & Format
-Runs ESLint and Prettier on every push and PR.
-
-2️⃣ Tests
-Executes automated tests and uploads coverage artifacts.
-
-3️⃣ Docker Build & Push
-Builds optimized, multi-platform Docker images and pushes them to Docker Hub.
-
-Triggers:
-
-Push to main or staging
-
-Pull requests
-
-🚀 Learning Outcomes
-
-Through this project, I gained hands-on experience in:
-
-Designing scalable backend APIs
-
-Building secure, production-ready services
-
-Working with PostgreSQL and SQL
-
-Automating CI/CD pipelines
-
-Containerizing and shipping applications
-
-This repository reflects my product-oriented engineering mindset and continuous experimentation with modern backend and infrastructure tools.
-
-👨‍💻 Author
-
-Ziad Mohamed
-Backend & Python-focused Developer
-Interested in scalable systems, AI experimentation, and building real products.
