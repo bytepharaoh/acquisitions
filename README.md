@@ -1,121 +1,96 @@
-# 🚀 Scalable Production-Ready API — DevOps Learning Project
+🚀 Scalable Production-Ready API
 
-This repository contains my DevOps practice project inspired by JavaScript Mastery’s “Build a Scalable Production Ready API” tutorial.
+High-Load Backend & DevOps Practice Project
 
-The goal of this project is to understand how real DevOps pipelines work — from writing backend code, to securing it, testing it, containerizing it, and automating deployment steps.  
-I am still learning DevOps, and this project represents my current progress and practical experience.
+This repository contains a production-ready backend API designed to simulate real-world, high-load systems and modern development workflows.
 
----
+The project focuses on building, testing, containerizing, and deploying scalable APIs, following industry-grade backend and DevOps practices used in real products.
 
-## ✨ Introduction
+✨ Overview
 
-This API is built using Node.js, Express, Drizzle ORM, and Neon Postgres.  
-During this project, I learned how to:
+This project demonstrates how a backend service evolves from source code into a secure, containerized, and automated production system.
 
-- Build a scalable backend API  
-- Use Docker for development and production  
-- Set up CI/CD pipelines with GitHub Actions  
-- Automate linting, formatting, and testing  
-- Build and push production Docker images  
-- Apply security and validation using Arcjet and Zod  
+Key goals:
 
-This project helped me understand the real workflow of DevOps in a simple, practical way.
+Design a clean, scalable API architecture
 
----
+Apply security, validation, and authentication best practices
 
-## ⚙️ Tech Stack
+Automate testing, CI/CD, and Docker image delivery
 
-### 🟦 Backend
-- **Node.js** – JavaScript runtime  
-- **Express.js** – API framework  
-- **Drizzle ORM** – Type-safe SQL queries  
-- **Neon Postgres** – Serverless PostgreSQL  
-- **Zod** – Runtime schema validation  
+Understand how real backend products are built and shipped
 
-### 🔐 Security
-- **Arcjet** – Security layer for rate limiting & bot protection  
-- **JWT Authentication**  
+⚙️ Tech Stack
+🟦 Backend
 
-### 🛠 DevOps (Beginner-Friendly)
-- **Docker** – Containerization  
-- **Docker Compose** – Development environment  
-- **GitHub Actions** – CI/CD automation  
-- **Buildx** – Multi-platform Docker builds  
+Node.js / Express — REST API development
 
-### 🧪 Testing
-- **Jest**  
-- **SuperTest**  
-- Coverage reports uploaded through CI  
+Drizzle ORM — Type-safe SQL queries
 
----
+PostgreSQL (Neon) — Production-grade database
 
-## 🔋 Features
+Zod — Runtime schema validation
 
-### API Features
-- User signup / signin / signout  
-- JWT authentication  
-- Role-based access control (admin/user)  
-- Business listings (create, update, delete, browse)  
-- Deal management (create, accept, reject)  
-- Request data validation using Zod  
-- System health check endpoint  
-- Structured logging with Winston  
-- Absolute imports using `#` alias  
+🔐 Security
 
-### DevOps Features
-- ESLint & Prettier code quality enforcement  
-- Automated tests & coverage on every push  
-- Docker production image building  
-- Automatic Docker Hub push through CI/CD  
-- Clear workflow separation:
-  - `lint-and-format.yml`
-  - `tests.yml`
-  - `docker-build-and-push.yml`
+JWT Authentication
 
----
-2️⃣ Install Dependencies
-npm install
+Role-based access control (RBAC)
 
-3️⃣ Configure Environment Variables
+Arcjet — Rate limiting & bot protection
 
-Create a .env file:
+🛠 Infrastructure & DevOps
 
-# Server
-PORT=3000
-NODE_ENV=development
-LOG_LEVEL=info
+Docker & Docker Compose — Containerized environments
 
-# Database
-DATABASE_URL=
+GitHub Actions — CI/CD automation
 
-# Arcjet Security Key
-ARCJET_KEY=
+Multi-platform Docker builds (Buildx)
 
+Automated image publishing
 
-▶️ Running the Project Locally
-Development Mode
-npm run dev
+🧪 Testing & Quality
 
+Jest & SuperTest
 
-Server will run at:
+Automated test execution & coverage reports
 
-http://localhost:3000
+ESLint & Prettier enforcement
 
-Production Build
-npm run build
-npm start
+🔋 Features
+API Capabilities
 
-🐳 Docker Usage
-Build Production Image
-docker build -t my-api .
+User authentication (signup / signin / signout)
 
-Run Container
-docker run -p 3000:3000 my-api
+JWT-based authorization
 
-Development Environment (Docker Compose)
-docker compose up --build
+Admin & user roles
 
-🧱 Project Structure
+Business listings management
+
+Deal lifecycle management (create / accept / reject)
+
+Request validation with Zod
+
+Health check endpoint
+
+Structured logging with Winston
+
+DevOps & Automation
+
+CI pipelines for linting, testing, and builds
+
+Automated Docker image creation & publishing
+
+Clear workflow separation:
+
+lint-and-format.yml
+
+tests.yml
+
+docker-build-and-push.yml
+
+🧱 Architecture
 src/
  ├── config/
  ├── controllers/
@@ -126,50 +101,78 @@ src/
  ├── services/
  └── utils/
 
-⚙️ CI/CD Workflows (GitHub Actions)
 
-This project includes 3 workflows:
+The project follows a modular, service-oriented structure, making it easy to scale, test, and extend.
 
-🟦 1. Lint & Format
+▶️ Running Locally
+Install dependencies
+npm install
 
-Runs ESLint and Prettier checks on every push and pull request.
+Environment variables
 
-🟩 2. Tests
+Create a .env file:
 
-Runs Jest tests, checks coverage, and uploads results as artifacts.
+PORT=3000
+NODE_ENV=development
+LOG_LEVEL=info
+DATABASE_URL=
+ARCJET_KEY=
 
-🟧 3. Docker Build & Push
+Development mode
+npm run dev
 
-Builds a production-ready Docker image and pushes it to Docker Hub using:
 
-Multi-platform Buildx
+Server runs at:
 
-Metadata tagging
+http://localhost:3000
 
-Cached layers
+🐳 Docker
+Build production image
+docker build -t scalable-api .
 
-Workflows trigger on:
+Run container
+docker run -p 3000:3000 scalable-api
+
+Development environment
+docker compose up --build
+
+⚙️ CI/CD Pipelines
+
+This project includes three automated GitHub Actions workflows:
+
+1️⃣ Lint & Format
+Runs ESLint and Prettier on every push and PR.
+
+2️⃣ Tests
+Executes automated tests and uploads coverage artifacts.
+
+3️⃣ Docker Build & Push
+Builds optimized, multi-platform Docker images and pushes them to Docker Hub.
+
+Triggers:
 
 Push to main or staging
 
 Pull requests
 
-🚀 Notes
+🚀 Learning Outcomes
 
-This project is part of my DevOps learning journey.
-I am currently exploring:
+Through this project, I gained hands-on experience in:
 
-More advanced CI/CD pipelines
+Designing scalable backend APIs
 
-Docker image optimization
+Building secure, production-ready services
 
-API security
+Working with PostgreSQL and SQL
 
-Backend architecture best practices
+Automating CI/CD pipelines
 
-More updates will be added as I continue learning.
+Containerizing and shipping applications
+
+This repository reflects my product-oriented engineering mindset and continuous experimentation with modern backend and infrastructure tools.
 
 👨‍💻 Author
 
-Ziad Mohamed 
-DevOps & cybersecurity Learner
+Ziad Mohamed
+Backend & Python-focused Developer
+Interested in scalable systems, AI experimentation, and building real products.
