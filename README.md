@@ -11,7 +11,7 @@ The project focuses on **building, testing, containerizing, and deploying scalab
 
 This project demonstrates how a backend service evolves from source code into a **secure, containerized, and automated production system**.
 
-Key goals:
+### Key goals
 - Design a clean, scalable API architecture
 - Apply security, validation, and authentication best practices
 - Automate testing, CI/CD, and Docker image delivery
@@ -79,38 +79,92 @@ src/
  ├── schemas/
  ├── services/
  └── utils/
-
-### ▶️ Running Locally
-```
-Install dependencies
 ```
 
-ذذ``npm install
+---
 
-Environment variables
+## ▶️ Running Locally
 
-Create a .env file:
+### Install dependencies
+```bash
+npm install
+```
 
+### Environment variables
+Create a `.env` file:
+```env
 PORT=3000
 NODE_ENV=development
 LOG_LEVEL=info
 DATABASE_URL=
 ARCJET_KEY=
+```
 
-Development mode
+### Development mode
+```bash
 npm run dev
-
+```
 
 Server runs at:
-
+```
 http://localhost:3000
+```
 
-🐳 Docker
-Build production image
+---
+
+## 🐳 Docker
+
+### Build production image
+```bash
 docker build -t scalable-api .
+```
 
-Run container
+### Run container
+```bash
 docker run -p 3000:3000 scalable-api
+```
 
-Development environment
+### Development environment
+```bash
 docker compose up --build
+```
+
+---
+
+## ⚙️ CI/CD Pipelines
+
+This project includes **three automated GitHub Actions workflows**:
+
+### 1️⃣ Lint & Format
+Runs ESLint and Prettier on every push and pull request.
+
+### 2️⃣ Tests
+Executes Jest tests, checks coverage, and uploads artifacts.
+
+### 3️⃣ Docker Build & Push
+Builds optimized, multi-platform Docker images and pushes them to Docker Hub.
+
+**Triggers**
+- Push to `main` or `staging`
+- Pull requests
+
+---
+
+## 🚀 Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+- Designing scalable backend APIs
+- Building secure, production-ready services
+- Working with PostgreSQL and SQL
+- Automating CI/CD pipelines
+- Containerizing and shipping applications
+
+This repository reflects a **product-oriented engineering mindset** and continuous experimentation with modern backend and infrastructure tools.
+
+---
+
+## 👨‍💻 Author
+
+**Ziad Mohamed**  
+Backend & Python-focused Developer  
+Interested in scalable systems, AI experimentation, and building real products.
